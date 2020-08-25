@@ -1,0 +1,27 @@
+// .Contact-appear {
+//   transform: translateX(-100%);
+// }
+
+// .Contact-appear-active {
+//   transform: translateX(0);
+//   transition: all 500ms linear;
+// }
+
+.Contact-enter {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.Contact-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 500ms linear;
+}
+.Contact-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+.Contact-exit-active {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 500ms linear;
+}

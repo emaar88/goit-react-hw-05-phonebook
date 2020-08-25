@@ -1,0 +1,15 @@
+.button {
+  float: right;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.toAddButton {
+  font-size: 20px;
+}
+
+p {
+  font-size: 24px;
+}

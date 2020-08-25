@@ -1,0 +1,50 @@
+.fadePhone-appear {
+  transform: translateX(-100%);
+}
+
+.fadePhone-appear-active {
+  transform: translateX(0);
+  transition: transform 500ms linear;
+}
+.fadePhone-enter {
+  transform: translateX(0);
+}
+.fadePhone-enter-active {
+  transform: translateX(-100%);
+  transition: all 500ms linear;
+}
+.fadePhone-exit {
+  transform: translateX(0);
+}
+.fadePhone-exit-active {
+  transform: translateX(100%);
+  transition: all 500ms linear;
+}
+
+// .filterPhone-appear {
+//   transform: translateX(-100%);
+// }
+
+// .filterPhone-appear-active {
+//   transform: translateX(0);
+//   transition: transform 500ms linear;
+// }
+
+.filterPhone-enter {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.filterPhone-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: transform 500ms linear;
+}
+.filterPhone-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+.filterPhone-exit-active {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 500ms linear;
+}

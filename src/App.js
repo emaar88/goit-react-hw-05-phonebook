@@ -72,7 +72,29 @@ class App extends Component {
       });
       return;
     } else if (contact.name === "" || contact.number === "") {
-      toast.error(`Введите не пустое значение!`, {
+      toast.error(`Введено пустое значение!`, {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+      return;
+    } else if (contact.name.length < 3) {
+      toast.error(`Введено слишком короткое имя!`, {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+      return;
+    } else if (contact.number.length < 6) {
+      toast.error(`Введен слишком короткий номер телефона!`, {
         position: "top-right",
         autoClose: 2000,
         hideProgressBar: false,
@@ -123,7 +145,6 @@ class App extends Component {
         <ContactForm submitForm={this.addContact}></ContactForm>
         <h2 className={classes.minTitleName}>Contacts</h2>
 
-        {/* {contacts.length > 1 && ( */}
         <CSSTransition
           in={contacts.length > 1}
           timeout={500}
@@ -132,7 +153,6 @@ class App extends Component {
         >
           <Filter filter={filter} onRename={this.Rename}></Filter>
         </CSSTransition>
-        {/* )} */}
 
         <h2 className={classes.minTitleName}>Contacts List</h2>
 

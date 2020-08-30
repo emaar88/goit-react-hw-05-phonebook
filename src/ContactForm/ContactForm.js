@@ -2,8 +2,12 @@ import React, { Component } from "react";
 import classes from "./ContactForm.module.css";
 import { v4 as uuidv4 } from "uuid";
 import Button from "react-bootstrap/Button";
+import PropTypes from "prop-types";
 
 class ContactForm extends Component {
+  static propTypes = {
+    submitForm: PropTypes.func.isRequired,
+  };
   state = {
     name: "",
     number: "",
@@ -60,9 +64,6 @@ class ContactForm extends Component {
               onChange={this.handleChange}
             />
           </label>
-          {/* <button className={classes.button} type="submit">
-            Add Contact
-          </button> */}
           <Button variant="primary" type="submit" size="lg" block>
             Add Contact
           </Button>

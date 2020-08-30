@@ -6,10 +6,7 @@ import Button from "react-bootstrap/Button";
 const Contact = ({ name, number, deleteContact }) => {
   return (
     <>
-      <p>{name}:</p> <p>{number}</p>
-      {/* <button  className={classes.button}>
-        Delete
-      </button> */}
+      <p>{name}</p> <p>{number}</p>
       <Button
         onClick={deleteContact}
         variant="danger"
